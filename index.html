@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PaleoSeed Laboratory & Consulting</title>
+  <meta name="description" content="PaleoSeed Laboratory &amp; Consulting provides professional macrobotanical analysis services to archaeologists, indigenous groups, and universities across Canada.">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -79,15 +80,12 @@
       font-size: 0.7rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--soil);
+      color: var(--clay);
       text-decoration: none;
-      transition: color 0.2s, background 0.2s;
-      padding: 0.3rem 0.6rem;
-      background: rgba(245, 237, 216, 0.75);
-      border-radius: 2px;
+      transition: color 0.2s;
     }
 
-    .nav-links a:hover { color: var(--amber); background: rgba(245, 237, 216, 0.95); }
+    .nav-links a:hover { color: var(--amber); }
 
     /* ── HERO ── */
     .hero {
@@ -399,8 +397,6 @@
       border-top: 3px solid transparent;
       transition: border-color 0.3s, transform 0.3s;
       cursor: default;
-      display: flex;
-      flex-direction: column;
     }
 
     .service-card:hover {
@@ -431,7 +427,6 @@
       color: var(--stone);
       font-weight: 300;
       margin-bottom: 1.5rem;
-      flex-grow: 1;
     }
 
     .service-price {
@@ -739,7 +734,6 @@
     }
 
     #contact .section-title { color: var(--straw); }
-    #contact .section-title em { color: var(--straw); }
     #contact .section-eyebrow { color: var(--amber); }
 
     #contact p {
@@ -771,15 +765,6 @@
       font-size: 0.9rem;
       color: var(--straw);
       font-weight: 300;
-    }
-
-    .contact-value a {
-      color: var(--straw);
-      text-decoration: none;
-    }
-
-    .contact-value a:hover {
-      color: var(--amber);
     }
 
     .contact-form {
@@ -834,8 +819,8 @@
 
     .form-submit {
       padding: 0.9rem 2rem;
-      background: var(--soil);
-      color: var(--straw);
+      background: var(--amber);
+      color: var(--soil);
       font-family: 'DM Mono', monospace;
       font-size: 0.7rem;
       letter-spacing: 0.15em;
@@ -847,7 +832,7 @@
       margin-top: 0.5rem;
     }
 
-    .form-submit:hover { background: var(--clay); transform: translateY(-2px); }
+    .form-submit:hover { background: var(--straw); transform: translateY(-2px); }
 
     /* ── FOOTER ── */
     footer {
@@ -942,7 +927,7 @@
         display: none;
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(42, 35, 28, 0.97);
+        background: rgba(245, 237, 216, 0.97);
         backdrop-filter: blur(16px);
         flex-direction: column;
         align-items: center;
@@ -951,7 +936,7 @@
         z-index: 90;
       }
       .nav-links.open { display: flex; }
-      .nav-links a { font-size: 0.85rem; letter-spacing: 0.2em; color: var(--straw); }
+      .nav-links a { font-size: 0.85rem; letter-spacing: 0.2em; }
       section { padding: 4rem 1.5rem; }
       .hero-left { padding: 7rem 1.5rem 3rem; }
       .hero-title { font-size: 2.6rem; }
@@ -1021,8 +1006,8 @@
   <!-- STATS -->
   <div class="stats-bar">
     <div class="stat">
-      <div class="stat-number">In House</div>
-      <div class="stat-label">Reference Collection</div>
+      <div class="stat-number">Extensive</div>
+      <div class="stat-label">In House Reference Collection</div>
     </div>
     <div class="stat-divider"></div>
     <div class="stat">
@@ -1052,40 +1037,40 @@
     <h2 class="section-title reveal">Laboratory <em>analysis</em> services</h2>
     <div class="services-grid">
       <div class="service-card reveal">
-        <p class="service-number">01 — Processing</p>
+        <p class="service-number">01 — Analysis</p>
+        <h3 class="service-name">Economic Seed Analysis</h3>
+        <p class="service-desc">Identification of cultivated and domesticated seeds — grasses, pulses, and fruits — providing insight into human diet, agricultural practices, crop preferences, and trade networks.</p>
+        <p class="service-price">$100 CAD / sample</p>
+      </div>
+      <div class="service-card reveal">
+        <p class="service-number">02 — Analysis</p>
+        <h3 class="service-name">Wild Seed Analysis</h3>
+        <p class="service-desc">Identification of non-cultivated plant seeds for environmental and vegetation community reconstruction. Valuable for understanding past soil conditions, precipitation, and land use patterns.</p>
+        <p class="service-price">$200 CAD / sample</p>
+      </div>
+      <div class="service-card reveal">
+        <p class="service-number">03 — Processing</p>
         <h3 class="service-name">Sample Flotation, Drying & Sieving</h3>
         <p class="service-desc">Water flotation processing to extract macrobotanical remains from sediment samples. Light and heavy fraction recovery with full documentation. Dry sieving available for sandy soils.</p>
         <p class="service-price">$300 CAD / sample</p>
       </div>
       <div class="service-card reveal">
-        <p class="service-number">02 — Analysis</p>
-        <h3 class="service-name">Cultivar Seed Analysis</h3>
-        <p class="service-desc">Identification of cultivated and domesticated seeds providing insight into human diet, plant husbandry, crop preferences, and trade networks. Cultivar seeds are commonly the most dominant seeds recovered. Examples include corn, barley, rice, or millet, depending on the context.</p>
-        <p class="service-price">$200 CAD / sample</p>
-      </div>
-      <div class="service-card reveal">
-        <p class="service-number">03 — Analysis</p>
-        <h3 class="service-name">Wild Seed Analysis</h3>
-        <p class="service-desc">Identification of "wild" plant seeds. These are seeds which generally occur at such low rates that their inclusion in the archaeological record is considered to represent either "wild" foraging rather than cultivating or merely deposition from the local environment through happenstance. However, it is the opinion at PSL that this information is equally as important as cultivars. In particular, wild seed analysis is useful for environmental and vegetation community reconstruction.</p>
-        <p class="service-price">$200 CAD / sample</p>
-      </div>
-      <div class="service-card reveal">
         <p class="service-number">04 — Comprehensive</p>
         <h3 class="service-name">Full Macrobotanical Package</h3>
-        <p class="service-desc">Complete analysis combining cultivar seed and wild seed identification. The most holistic investigation of past human-plant relationships. Recommended for most projects.</p>
-        <p class="service-price">$300 CAD / sample</p>
+        <p class="service-desc">Complete analysis combining economic seed and wild seed identification. The most holistic investigation of past human-plant relationships. Recommended for most projects.</p>
+        <p class="service-price">$400 CAD / sample</p>
       </div>
       <div class="service-card reveal">
-        <p class="service-number">05 — Reporting</p>
+        <p class="service-number">05 — Wood Charcoal</p>
+        <h3 class="service-name">Wood Charcoal & Carbon Dating</h3>
+        <p class="service-desc">PaleoSeed does not currently offer in-house wood charcoal analysis, but can facilitate connections with qualified carbon dating laboratories. Contact us to discuss your project needs.</p>
+        <p class="service-price">Referral — No charge</p>
+      </div>
+      <div class="service-card reveal">
+        <p class="service-number">06 — Reporting</p>
         <h3 class="service-name">Project Reporting</h3>
-        <p class="service-desc">Basic and interpretive report formats. All reports delivered as PDF. Both Basic and Interpretive reports include raw data, density, and photographs. Interpretive reports add case study comparisons and analysis.</p>
+        <p class="service-desc">Basic and interpretive report formats. All reports delivered as PDF. Basic reports include raw data, density, ubiquity, and photographs. Interpretive reports add case study comparisons and statistical analysis.</p>
         <p class="service-price">From $1,000 CAD / project</p>
-      </div>
-      <div class="service-card reveal">
-        <p class="service-number">06 — Consulting</p>
-        <h3 class="service-name">Consulting</h3>
-        <p class="service-desc">Can provide consulting services on a case by case basis such as how to incorporate paleoethnobotanical methodologies into your project, how to conduct your own floatation, or other consulting needs as requested.</p>
-        <p class="service-price">Contact for pricing</p>
       </div>
     </div>
   </section>
@@ -1096,10 +1081,9 @@
       <p class="section-eyebrow reveal">About</p>
       <h2 class="section-title reveal">Specialist expertise in <em>plant remains</em></h2>
       <div class="about-text reveal">
-        <p>PaleoSeed Laboratory & Consulting provides professional macrobotanical analysis services to indigenous groups, professional archaeologists, universities, and research institutions across Canada.</p>
-        <p>Seeds and other botanicals recovered from archaeological contexts are important lines of evidence in the scientific study of past human activities and environmental relations. Paleoethnobotany (archaeobotany) can illuminate past diet, plant husbandry, land use, seasonal mobility, and environmental change.</p>
-        <p>Tyler Cantwell, MSc [Principal Specialist] first started working in macrobotanical recovery in 2013 as part of the Baikal-Hokkaido Archaeology Project where he formed his foundational knowledge on floatation and processing. His sample analysis and interpretation skills were developed under the supervision of Dr. Gary Crawford. When Tyler isn't looking at seeds under the microscope, he is usually looking at them in the garden.</p>
-        <p>Based in St. Albert, Alberta, PaleoSeed combines rigorous scientific methodology with fast turnaround times and is particularly suited to the demands of rescue archaeology.</p>
+        <p>PaleoSeed Laboratory & Consulting provides professional macrobotanical analysis services to cultural resource management firms, universities, and research institutions across Alberta and Western Canada.</p>
+        <p>Seeds, fruits, and plant parts recovered from archaeological contexts are important lines of evidence in the scientific study of past human societies — illuminating diet, agriculture, land use, seasonal mobility, and environmental change.</p>
+        <p>Based in St. Albert, Alberta, PaleoSeed combines rigorous scientific methodology with fast turnaround times suited to the demands of CRM archaeology.</p>
       </div>
       <div class="about-credentials reveal">
         <div class="credential">
@@ -1122,10 +1106,7 @@
     </div>
     <div class="about-visual reveal">
       <div class="about-box">
-        <p class="about-quote" style="font-weight:700; font-size:1rem; margin-bottom:1rem;">📋 Quick Tips</p>
-        <p class="about-quote" style="font-size:0.88rem; margin-bottom:0.9rem;">Soil Samples taken from around features like hearths, pits, and "living floors" are usually successful in the recovery of macrobotanical remains but sampling should be taken systematically across sites to rule out sample bias and create a more holistic interpretation of the site.</p>
-        <p class="about-quote" style="font-size:0.88rem; margin-bottom:0.9rem;">Keep each soil sample to a maximum of 15L.</p>
-        <p class="about-quote" style="font-size:0.88rem; margin-bottom:1rem;">Allow soil samples to dry and keep them away from heat and sunlight. If this is followed, soil samples can be stored for long periods. Failure to follow this often results in mold.</p>
+        <p class="about-quote">"Macrobotanical data integrates readily with other archaeological evidence to illuminate the full story of human-plant relationships across time."</p>
         <p class="about-location">📍 St. Albert, Alberta, Canada</p>
       </div>
     </div>
@@ -1139,22 +1120,22 @@
       <div class="process-step reveal">
         <div class="step-number">01</div>
         <p class="step-title">Submit Request</p>
-        <p class="step-desc">Complete the online service request form. Receive a Scope of Work and cost estimate within 3–5 business days.</p>
+        <p class="step-desc">Complete the online service request form. Receive a Statement of Work and cost estimate within 3–5 business days.</p>
       </div>
       <div class="process-step reveal">
         <div class="step-number">02</div>
         <p class="step-title">Agreement & Invoice</p>
-        <p class="step-desc">Review and approve the SOW. 60% of the invoice is due upon contract signing.</p>
+        <p class="step-desc">Review and approve the SOW. A 60% deposit invoice is issued before work commences.</p>
       </div>
       <div class="process-step reveal">
         <div class="step-number">03</div>
         <p class="step-title">Ship Samples</p>
-        <p class="step-desc">Package and ship soil samples or pre-floated samples to our St. Albert laboratory.</p>
+        <p class="step-desc">Package and ship floated or dry-sieved samples. Label all packages as CHARCOAL SPECIMENS.</p>
       </div>
       <div class="process-step reveal">
         <div class="step-number">04</div>
         <p class="step-title">Analysis</p>
-        <p class="step-desc">Samples are processed and examined under stereo microscopy. All identifications documented with measurements and photography.</p>
+        <p class="step-desc">Samples are examined under stereo microscopy. All identifications documented with measurements and photography.</p>
       </div>
       <div class="process-step reveal">
         <div class="step-number">05</div>
@@ -1176,9 +1157,9 @@
         </div>
         <div class="pricing-table" style="margin-top:2px;">
           <div class="pricing-table-header">Analysis — Per Sample</div>
-          <div class="pricing-row"><span class="pricing-item">Cultivar Seed Analysis</span><span class="pricing-cost">$200 CAD</span></div>
+          <div class="pricing-row"><span class="pricing-item">Economic Seed Analysis</span><span class="pricing-cost">$100 CAD</span></div>
           <div class="pricing-row"><span class="pricing-item">Wild Seed Analysis</span><span class="pricing-cost">$200 CAD</span></div>
-          <div class="pricing-row pricing-row--highlight"><span class="pricing-item pricing-item--highlight">Comprehensive Analysis <span class="pricing-badge">Both included</span></span><span class="pricing-cost">$300 CAD</span></div>
+          <div class="pricing-row pricing-row--highlight"><span class="pricing-item pricing-item--highlight">Comprehensive Analysis <span class="pricing-badge">Both included</span></span><span class="pricing-cost">$400 CAD</span></div>
         </div>
       </div>
       <div>
@@ -1187,23 +1168,23 @@
           <div class="pricing-row">
             <span class="pricing-item">
               Basic Report
-              <span class="pricing-subtext">Sample descriptions, density, raw data & photographs</span>
+              <span class="pricing-subtext">Sample descriptions, density, ubiquity, abundance, raw data & photographs</span>
             </span>
-            <span class="pricing-cost">$1,000 CAD</span>
+            <span class="pricing-cost">$1,000 CAD<span class="pricing-subtext pricing-subtext--right">20 hrs</span></span>
           </div>
           <div class="pricing-row">
             <span class="pricing-item">
               Interpretive Report
-              <span class="pricing-subtext">All basic components + case study comparisons & analysis</span>
+              <span class="pricing-subtext">All basic components + case study comparisons & statistical analysis</span>
             </span>
-            <span class="pricing-cost">$2,000 CAD</span>
+            <span class="pricing-cost">$1,500 CAD<span class="pricing-subtext pricing-subtext--right">30 hrs</span></span>
           </div>
-          <div class="pricing-row"><span class="pricing-item">Consulting Services Rate</span><span class="pricing-cost">$50 CAD / hr</span></div>
-          <div class="pricing-row"><span class="pricing-item">Lab Supplies <span class="pricing-subtext">Bags, labels, vials, sorting tools</span></span><span class="pricing-cost">$20 CAD</span></div>
+          <div class="pricing-row"><span class="pricing-item">Research for Interpretive Reports</span><span class="pricing-cost">$50 CAD / hr</span></div>
+          <div class="pricing-row"><span class="pricing-item">Lab Supplies <span class="pricing-subtext">Bags, labels, vials, sorting tools</span></span><span class="pricing-cost">$25 CAD</span></div>
           <div class="pricing-row"><span class="pricing-item">Return Shipping <span class="pricing-subtext">Billed at cost</span></span><span class="pricing-cost pricing-cost--muted">TBD</span></div>
         </div>
         <div class="pricing-note">
-          All prices in CAD. GST added where applicable. First Nations clients are asked to submit a GST exemption letter. Payment terms: 60% deposit on project commencement, 40% balance on report delivery. Estimates honoured for three months.
+          All prices in CAD. Taxes not included. First Nations clients are asked to submit a GST exemption letter. Payment terms: 60% deposit on project commencement, 40% balance on report delivery. Estimates honoured for three months.
         </div>
         <div class="pricing-student reveal">
           <div class="pricing-student-icon">✦</div>
@@ -1224,7 +1205,7 @@
       <p>Submit a service request and we will be in contact within 3–5 business days to discuss your project and provide a detailed cost estimate. Estimates are honoured for three months.</p>
       <div class="contact-detail">
         <span class="contact-label">Email</span>
-        <span class="contact-value"><a href="mailto:info@paleoseedlab.ca">info@paleoseedlab.ca</a></span>
+        <span class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a9c0c7cfc6e9d9c8c5ccc6dacccccdc5c8cb87cac8">[email&#160;protected]</a></span>
       </div>
       <div class="contact-detail">
         <span class="contact-label">Location</span>
@@ -1240,37 +1221,34 @@
       </div>
     </div>
     <div>
-      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="c5f9a0b7-8d0a-44bb-9d5f-6367ff84eb12">
-        <input type="hidden" name="subject" value="New Service Request — PaleoSeed Laboratory">
-        <input type="checkbox" name="botcheck" style="display:none;">
+      <form class="contact-form" onsubmit="return false;">
         <div class="form-row">
           <div class="form-group">
             <label>Company</label>
-            <input type="text" name="company" placeholder="Your firm name">
+            <input type="text" placeholder="Your firm name">
           </div>
           <div class="form-group">
             <label>Contact Name</label>
-            <input type="text" name="name" placeholder="Full name" required>
+            <input type="text" placeholder="Full name">
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
             <label>Email</label>
-            <input type="email" name="email" placeholder="email@firm.com" required>
+            <input type="email" placeholder="email@firm.com">
           </div>
           <div class="form-group">
             <label>Phone</label>
-            <input type="tel" name="phone" placeholder="(000) 000-0000">
+            <input type="tel" placeholder="(000) 000-0000">
           </div>
         </div>
         <div class="form-group">
           <label>Address <span style="font-weight:400;opacity:0.7;">[For the return of samples]</span></label>
-          <input type="text" name="address" placeholder="Street address, city, province, postal code">
+          <input type="text" placeholder="Street address, city, province, postal code">
         </div>
         <div class="form-group">
           <label>Client Type</label>
-          <select name="client_type" id="clientTypeSelect" onchange="handleClientType(this.value)">
+          <select id="clientTypeSelect" onchange="handleClientType(this.value)">
             <option value="">Select...</option>
             <option value="firstnations">First Nations</option>
             <option value="archaeology">Archaeology Professional</option>
@@ -1282,44 +1260,26 @@
         </div>
         <div class="form-group">
           <label>Site Name / Project Reference</label>
-          <input type="text" name="site_name" placeholder="Site name or project number">
+          <input type="text" placeholder="Site name or project number">
         </div>
-        <div class="form-group">
-          <label>Do you have samples requiring flotation?</label>
-          <select name="requires_flotation" id="flotationSelect" onchange="handleFlotation(this.value)">
-            <option value="">Select...</option>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </div>
-        <div class="form-group" id="flotationYesGroup" style="display:none;">
-          <label>Number of 15L (max) soil samples requiring flotation and analysis</label>
-          <input type="number" name="samples_requiring_flotation" placeholder="e.g. 40" min="1">
-        </div>
-        <div class="form-group">
-          <label>Number of pre-floated samples</label>
-          <input type="number" name="pre_floated_samples" placeholder="e.g. 40" min="1">
-        </div>
-        <div class="form-group">
-          <label>Analysis Type</label>
-          <select name="analysis_type">
-            <option value="">Select...</option>
-            <option>Cultivar Seed Analysis</option>
-            <option>Wild Seed Analysis</option>
-            <option>Full Macrobotanical Package</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Report Type</label>
-          <select name="report_type">
-            <option value="">Select...</option>
-            <option>Basic Report</option>
-            <option>Interpretive Report</option>
-          </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Number of Samples</label>
+            <input type="number" placeholder="e.g. 40">
+          </div>
+          <div class="form-group">
+            <label>Analysis Type</label>
+            <select>
+              <option value="">Select...</option>
+              <option>Economic Seed Analysis</option>
+              <option>Wild Seed Analysis</option>
+              <option>Comprehensive Analysis</option>
+            </select>
+          </div>
         </div>
         <div class="form-group">
           <label>Additional Notes</label>
-          <textarea name="message" placeholder="Timeline requirements, special considerations, permit number..."></textarea>
+          <textarea placeholder="Timeline requirements, special considerations, permit number..."></textarea>
         </div>
         <button type="submit" class="form-submit">Submit Request →</button>
       </form>
@@ -1333,26 +1293,6 @@
   </footer>
 
   <script>
-    function toggleNav() {
-      const nav = document.getElementById('navLinks');
-      const burger = document.getElementById('hamburger');
-      nav.classList.toggle('open');
-      burger.classList.toggle('open');
-    }
-
-    // Close nav when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('open');
-        document.getElementById('hamburger').classList.remove('open');
-      });
-    });
-
-    // Flotation conditional fields
-    function handleFlotation(value) {
-      document.getElementById('flotationYesGroup').style.display = value === 'yes' ? 'block' : 'none';
-    }
-
     // Client type notice
     function handleClientType(value) {
       const notice = document.getElementById('clientTypeNotice');
