@@ -1055,7 +1055,7 @@
         <p class="service-number">01 — Processing</p>
         <h3 class="service-name">Sample Flotation, Drying & Sieving</h3>
         <p class="service-desc">Water flotation processing to extract macrobotanical remains from sediment samples. Light and heavy fraction recovery with full documentation. Dry sieving available for sandy soils.</p>
-        <p class="service-price">$300 CAD / sample</p>
+        <p class="service-price">$200 CAD / sample</p>
       </div>
       <div class="service-card reveal">
         <p class="service-number">02 — Analysis</p>
@@ -1122,11 +1122,11 @@
     </div>
     <div class="about-visual reveal">
       <div class="about-box">
-        <p class="about-quote" style="font-weight:700; font-size:1rem; margin-bottom:1rem;">📋 Quick Tips</p>
+        <p class="about-quote" style="font-weight:700; font-size:1.2rem; margin-bottom:1rem; letter-spacing:0.01em;">Quick Tips</p>
         <p class="about-quote" style="font-size:0.88rem; margin-bottom:0.9rem;">Soil Samples taken from around features like hearths, pits, and "living floors" are usually successful in the recovery of macrobotanical remains but sampling should be taken systematically across sites to rule out sample bias and create a more holistic interpretation of the site.</p>
         <p class="about-quote" style="font-size:0.88rem; margin-bottom:0.9rem;">Keep each soil sample to a maximum of 15L.</p>
         <p class="about-quote" style="font-size:0.88rem; margin-bottom:1rem;">Allow soil samples to dry and keep them away from heat and sunlight. If this is followed, soil samples can be stored for long periods. Failure to follow this often results in mold.</p>
-        <p class="about-location">📍 St. Albert, Alberta, Canada</p>
+
       </div>
     </div>
   </section>
@@ -1172,7 +1172,7 @@
       <div>
         <div class="pricing-table">
           <div class="pricing-table-header">Sample Processing — Per Sample</div>
-          <div class="pricing-row"><span class="pricing-item">Flotation, Drying & Sieving</span><span class="pricing-cost">$300 CAD</span></div>
+          <div class="pricing-row"><span class="pricing-item">Flotation, Drying & Sieving</span><span class="pricing-cost">$200 CAD</span></div>
         </div>
         <div class="pricing-table" style="margin-top:2px;">
           <div class="pricing-table-header">Analysis — Per Sample</div>
@@ -1230,14 +1230,7 @@
         <span class="contact-label">Location</span>
         <span class="contact-value">St. Albert, Alberta, Canada</span>
       </div>
-      <div class="contact-detail">
-        <span class="contact-label">Mail To</span>
-        <span class="contact-value">PaleoSeed Laboratory & Consulting</span>
-      </div>
-      <div class="contact-detail">
-        <span class="contact-label">GST</span>
-        <span class="contact-value">Registration pending</span>
-      </div>
+
     </div>
     <div>
       <form class="contact-form" id="contactForm">
@@ -1261,16 +1254,16 @@
           </div>
           <div class="form-group">
             <label>Phone</label>
-            <input type="tel" name="phone" placeholder="(000) 000-0000">
+            <input type="tel" name="phone" placeholder="(000) 000-0000" required>
           </div>
         </div>
         <div class="form-group">
           <label>Address <span style="font-weight:400;opacity:0.7;">[For the return of samples]</span></label>
-          <input type="text" name="address" placeholder="Street address, city, province, postal code">
+          <input type="text" name="address" placeholder="Street address, city, province, postal code" required>
         </div>
         <div class="form-group">
           <label>Client Type</label>
-          <select id="clientTypeSelect" name="client_type" onchange="handleClientType(this.value)">
+          <select id="clientTypeSelect" name="client_type" onchange="handleClientType(this.value)" required>
             <option value="">Select...</option>
             <option value="firstnations">First Nations</option>
             <option value="archaeology">Archaeology Professional</option>
@@ -1282,11 +1275,11 @@
         </div>
         <div class="form-group">
           <label>Site Name / Project Reference</label>
-          <input type="text" name="site_name" placeholder="Site name or project number">
+          <input type="text" name="site_name" placeholder="Site name or project number" required>
         </div>
         <div class="form-group">
           <label>Do you have samples requiring flotation?</label>
-          <select id="flotationSelect" name="requires_flotation" onchange="handleFlotation(this.value)">
+          <select id="flotationSelect" name="requires_flotation" onchange="handleFlotation(this.value)" required>
             <option value="">Select...</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
@@ -1302,7 +1295,7 @@
         </div>
         <div class="form-group">
           <label>Analysis Type</label>
-          <select name="analysis_type">
+          <select name="analysis_type" required>
             <option value="">Select...</option>
             <option>Cultivar Seed Analysis</option>
             <option>Wild Seed Analysis</option>
@@ -1311,7 +1304,7 @@
         </div>
         <div class="form-group">
           <label>Report Type</label>
-          <select name="report_type">
+          <select name="report_type" required>
             <option value="">Select...</option>
             <option>Basic Report</option>
             <option>Interpretive Report</option>
