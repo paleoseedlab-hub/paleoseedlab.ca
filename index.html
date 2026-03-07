@@ -1339,6 +1339,7 @@
   </footer>
 
   <script>
+    // Nav toggle
     function toggleNav() {
       const nav = document.getElementById('navLinks');
       const burger = document.getElementById('hamburger');
@@ -1346,13 +1347,10 @@
       burger.classList.toggle('open');
     }
 
-    // Close nav when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.getElementById('navLinks').classList.remove('open');
-        document.getElementById('hamburger').classList.remove('open');
-      });
-    });
+    function closeNav() {
+      document.getElementById('navLinks').classList.remove('open');
+      document.getElementById('hamburger').classList.remove('open');
+    }
 
     // Flotation conditional fields
     function handleFlotation(value) {
@@ -1374,40 +1372,61 @@
       }
     }
 
-
     // Web3Forms submission handler
-    document.getElementById('contactForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const btn = document.getElementById('formSubmitBtn');
-      const successEl = document.getElementById('formSuccess');
-      const errorEl = document.getElementById('formError');
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-      successEl.style.display = 'none';
-      errorEl.style.display = 'none';
-      try {
-        const formData = new FormData(this);
-        const object = Object.fromEntries(formData);
-        const response = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(object)
-        });
-        const result = await response.json();
-        if (result.success) {
-          successEl.style.display = 'block';
-          successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          this.reset();
-          document.getElementById('flotationYesGroup').style.display = 'none';
-          document.getElementById('clientTypeNotice').style.display = 'none';
-        } else {
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Close nav when a link is clicked
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', closeNav);
+      });
+
+      var form = document.getElementById('contactForm');
+      if (!form) { console.error('contactForm not found'); return; }
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var btn = document.getElementById('formSubmitBtn');
+        var successEl = document.getElementById('formSuccess');
+        var errorEl = document.getElementById('formError');
+
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+        successEl.style.display = 'none';
+        errorEl.style.display = 'none';
+
+        try {
+          var formData = new FormData(form);
+          var object = {};
+          formData.forEach(function(value, key) { object[key] = value; });
+
+          var response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(object)
+          });
+
+          var result = await response.json();
+
+          if (result.success) {
+            successEl.style.display = 'block';
+            successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            form.reset();
+            document.getElementById('flotationYesGroup').style.display = 'none';
+            document.getElementById('clientTypeNotice').style.display = 'none';
+          } else {
+            console.error('Web3Forms error:', result);
+            errorEl.style.display = 'block';
+          }
+        } catch (err) {
+          console.error('Fetch error:', err);
           errorEl.style.display = 'block';
         }
-      } catch (err) {
-        errorEl.style.display = 'block';
-      }
-      btn.textContent = 'Submit Request →';
-      btn.disabled = false;
+
+        btn.textContent = 'Submit Request →';
+        btn.disabled = false;
+      });
     });
 
     // Scroll reveal
